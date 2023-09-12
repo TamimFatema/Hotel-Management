@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
 import Error from './pages/Error';
 import ContactForm from './pages/ContactUs';
+import BookNow from './pages/BookNow';
 import './App.css'
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="rooms" element={<Rooms />} />
           <Route path="error" element={<Error />} />
           <Route path="contact" element={<ContactForm />} />
+          <Route path="booknow" element={<BookNow />} />
         </Route>
       </Routes>
     </BrowserRouter>
