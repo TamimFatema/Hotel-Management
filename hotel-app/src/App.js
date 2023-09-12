@@ -1,24 +1,24 @@
 import React from 'react';
-import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Rooms from "./pages/Rooms";
-import SingleRooms from "./pages/SingleRooms";
-import Error from "./pages/Home"
-import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import './App.css'
+
+
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Routes>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/rooms' component={Rooms} />
-        <Route exact path='/rooms/:slug' component={SingleRooms} />
-        <Route component={Error}></Route>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="rooms" element={<Rooms />} />
+        </Route>
       </Routes>
-      <Navbar></Navbar>
-    </>
-  );
+    </BrowserRouter>
+  )
 }
 
 export default App;
