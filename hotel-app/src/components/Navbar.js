@@ -14,8 +14,8 @@ export default class Navbar extends Component {
     render() {
         return (
             <>
-                <nav className=' navbar'>
-                    <div className='nav-center'>
+                <nav className='navbar'>
+                    <div className='nav'>
                         <div className='nav-header'>
                             <Link to="/">
                                 <img src={logo} alt="Beach Resort"></img>
@@ -25,8 +25,7 @@ export default class Navbar extends Component {
                         <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
                             <li> <Link to="/">Home</Link></li>
                             <li> <Link to="/rooms">Rooms</Link></li>
-
-
+                            <li> <Link to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
 
