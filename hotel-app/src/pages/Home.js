@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import { Link } from 'react-router-dom'
-import Service from '../components/Service'
+import Facility from '../components/Facilities'
 export default function Home() {
     return (
         <>
@@ -10,7 +10,7 @@ export default function Home() {
                 <Banner title="luxirious room" subtitle="delux rooms starting at 2500 tk only">
                     <Link to='/rooms' className='btn-primary'>Our Rooms</Link></Banner>
             </Hero>
-            <Service />
+            <Facility />
         </>
     )
 }

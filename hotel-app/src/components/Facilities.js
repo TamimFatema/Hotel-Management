@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Title from './Title'
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa'
-export default class Service extends Component {
+export default class Facility extends Component {
     state = {
-        services: [
+        facilities: [
             {
                 icon: < FaCocktail />,
                 Title: "free welcome drinks",
@@ -33,11 +33,11 @@ export default class Service extends Component {
 
     render() {
         return (
-            <section className='service'>
-                <Title title="services" />
-                <div className='services-center'>
-                    {this.state.services.map((item, index) => {
-                        return <article key={index} className='service'>
+            <section className='facilities'>
+                <Title title="facilities" />
+                <div className='facilities-center'>
+                    {this.state.facilities.map((item, index) => {
+                        return <article key={index} className='facility'>
                             <span>{item.icon}</span>
                             <h6>{item.Title}</h6>
                             <p>{item.info}</p>

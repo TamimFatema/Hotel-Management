@@ -267,16 +267,16 @@ h6 {
 /* end of Title */
 
 /* services */
-.services {
+.facilities {
     padding: 5rem 0;
 }
 
-.services {
+.facilities {
     background: var(--darkGrey);
     text-align: center;
 }
 
-.services-center {
+.facilities-center {
     width: 90vw;
     margin: 0 auto;
     display: grid;
@@ -285,31 +285,31 @@ h6 {
     grid-column-gap: 50px;
 }
 
-.service span {
+.facility span {
     display: inline-block;
     color: var(--primaryColor);
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
-.services h6 {
+.facilities h6 {
     letter-spacing: var(--mainSpacing);
 }
 
-.services p {
+.facilities p {
     width: 80%;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) {
-    .services-center {
+    .facilities-center {
         width: 95vw;
         max-width: 1170px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .services p {
+    .facilities p {
         width: 100%;
     }
 }
