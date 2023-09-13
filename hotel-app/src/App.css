@@ -105,11 +105,11 @@ h6 {
 .navbar {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     padding: 0.75rem 2rem;
     background: var(--offWhite);
     z-index: 1;
+
 }
 
 .nav-header {
@@ -267,16 +267,16 @@ h6 {
 /* end of Title */
 
 /* services */
-.facilities {
+.complimentaries {
     padding: 5rem 0;
 }
 
-.facilities {
+.complimentaries {
     background: var(--darkGrey);
     text-align: center;
 }
 
-.facilities-center {
+.complimentaries-center {
     width: 90vw;
     margin: 0 auto;
     display: grid;
@@ -285,31 +285,31 @@ h6 {
     grid-column-gap: 50px;
 }
 
-.facility span {
+.complimentaries span {
     display: inline-block;
     color: var(--primaryColor);
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
-.facilities h6 {
+.complimentaries h6 {
     letter-spacing: var(--mainSpacing);
 }
 
-.facilities p {
+.complimentaries p {
     width: 80%;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) {
-    .facilities-center {
+    .complimentaries-center {
         width: 95vw;
         max-width: 1170px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .facilities p {
+    .complimentaries p {
         width: 100%;
     }
 }

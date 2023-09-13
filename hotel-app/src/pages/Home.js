@@ -2,15 +2,17 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import { Link } from 'react-router-dom'
-import Facility from '../components/Facilities'
+import Complimentary from '../components/Complimentary'
+import FeaturedRooms from '../components/FeaturedRooms'
 export default function Home() {
     return (
         <>
             <Hero>
-                <Banner title="luxirious room" subtitle="delux rooms starting at 2500 tk only">
+                <Banner title="luxurious  room" subtitle="delux rooms starting at 2500 tk only">
                     <Link to='/rooms' className='btn-primary'>Our Rooms</Link></Banner>
             </Hero>
-            <Facility />
+            <Complimentary />
+            <FeaturedRooms />
         </>
     )
 }
