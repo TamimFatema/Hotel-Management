@@ -22,12 +22,11 @@ export default [
     },
     fields: {
       name: "single economy",
-      slug: "single-economy",
+      roomID: "single-economy",
       type: "single",
       price: 100,
       size: 200,
       capacity: 1,
-      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -79,12 +78,11 @@ export default [
     },
     fields: {
       name: "single basic",
-      slug: "single-basic",
+      roomID: "single-basic",
       type: "single",
       price: 150,
       size: 250,
       capacity: 1,
-      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -136,12 +134,11 @@ export default [
     },
     fields: {
       name: "single standard",
-      slug: "single-standard",
+      roomID: "single-standard",
       type: "single",
       price: 250,
       size: 300,
       capacity: 1,
-      pets: true,
       breakfast: false,
       featured: false,
       description:
@@ -193,12 +190,11 @@ export default [
     },
     fields: {
       name: "single deluxe",
-      slug: "single-deluxe",
+      roomID: "single-deluxe",
       type: "single",
       price: 300,
       size: 400,
       capacity: 1,
-      pets: true,
       breakfast: true,
       featured: false,
       description:
@@ -250,12 +246,11 @@ export default [
     },
     fields: {
       name: "double economy",
-      slug: "double-economy",
+      roomID: "double-economy",
       type: "double",
       price: 200,
       size: 300,
       capacity: 2,
-      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -307,12 +302,11 @@ export default [
     },
     fields: {
       name: "double basic",
-      slug: "double-basic",
+      roomID: "double-basic",
       type: "double",
       price: 250,
       size: 350,
       capacity: 2,
-      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -364,12 +358,11 @@ export default [
     },
     fields: {
       name: "double standard",
-      slug: "double-standard",
+      roomID: "double-standard",
       type: "double",
       price: 300,
       size: 400,
       capacity: 2,
-      pets: true,
       breakfast: false,
       featured: false,
       description:
@@ -421,12 +414,11 @@ export default [
     },
     fields: {
       name: "double deluxe",
-      slug: "double-deluxe",
+      roomID: "double-deluxe",
       type: "double",
       price: 400,
       size: 500,
       capacity: 2,
-      pets: true,
       breakfast: true,
       featured: true,
       description:
@@ -478,12 +470,11 @@ export default [
     },
     fields: {
       name: "family economy",
-      slug: "family-economy",
+      roomID: "family-economy",
       type: "family",
       price: 300,
       size: 500,
       capacity: 3,
-      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -535,12 +526,11 @@ export default [
     },
     fields: {
       name: "family basic",
-      slug: "family-basic",
+      roomID: "family-basic",
       type: "family",
       price: 350,
       size: 550,
       capacity: 4,
-      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -592,12 +582,11 @@ export default [
     },
     fields: {
       name: "family standard",
-      slug: "family-standard",
+      roomID: "family-standard",
       type: "family",
       price: 400,
       size: 600,
       capacity: 5,
-      pets: true,
       breakfast: false,
       featured: false,
       description:
@@ -649,12 +638,11 @@ export default [
     },
     fields: {
       name: "family deluxe",
-      slug: "family-deluxe",
+      roomID: "family-deluxe",
       type: "family",
       price: 500,
       size: 700,
       capacity: 6,
-      pets: true,
       breakfast: true,
       featured: true,
       description:
@@ -706,12 +694,11 @@ export default [
     },
     fields: {
       name: "presidential",
-      slug: "presidential-room",
+      roomID: "presidential-room",
       type: "presidential",
       price: 600,
       size: 1000,
       capacity: 10,
-      pets: true,
       breakfast: true,
       featured: true,
       description:

@@ -4,6 +4,8 @@ import Banner from '../components/Banner'
 import { Link } from 'react-router-dom'
 import Complimentary from '../components/Complimentary'
 import FeaturedRooms from '../components/FeaturedRooms'
+import StyledHero from '../components/StyledHero'
+
 export default function Home() {
     return (
         <>

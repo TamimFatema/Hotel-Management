@@ -7,7 +7,7 @@ export default class RoomProvider extends Component {
         rooms: [],
         sortedRooms: [],
         featuredRooms: [],
-        loading: true
+        loading: false
     };
 
     componentDidMount() {
@@ -16,7 +16,6 @@ export default class RoomProvider extends Component {
         this.setState({
             rooms, featuredRooms, sortedRooms: rooms, loading: false
         })
-        console.log(rooms);
     }
 
     formatData(items) {
@@ -30,9 +29,9 @@ export default class RoomProvider extends Component {
         });
         return tempItems;
     }
-    getRoom = (slug) => {
+    getRoom = (roomID) => {
         let tempRooms = [...this.state.rooms];
-        const room = tempRooms.find(room => room.slug === slug);
+        const room = tempRooms.find(room => room.roomID === roomID);
         return room;
     };
     render() {
