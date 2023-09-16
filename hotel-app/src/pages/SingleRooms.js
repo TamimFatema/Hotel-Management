@@ -12,8 +12,6 @@ function SingleRooms() {
     const { roomID } = useParams();
 
     const contextType = useContext(RoomContext);
-
-    // const { getRoom } = contextType.getRoom;
     const room = contextType.getRoom(roomID);
     if (!room) {
         return (
@@ -68,51 +66,3 @@ function SingleRooms() {
 }
 
 export default SingleRooms
-
-
-// export default class SingleRooms extends Component {
-
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             roomID: "double-deluxe",
-//         };
-//     }
-
-//     // componentDidMount() {
-//     //     this.getPost(this.props.match.params.roomID);
-//     //     console.log(this.state.roomID);
-//     // }
-
-//     // componentDidUpdate(prevProps) {
-//     //     if (prevProps.match.params.slug !== this.props.match.params.roomID) {
-//     //         this.getPost(this.props.match.params.roomID);
-//     //         console.log(this.state.roomID);
-//     //     }
-//     // }
-
-
-//     static contextType = RoomContext;
-
-//     // componentDidMount(){}
-//     render() {
-//         const { getRoom } = this.context;
-//         const room = getRoom(this.state.roomID);
-//         if (!room) {
-//             return (
-//                 <div className='error'>
-//                     <h3>No such room was found...</h3>
-//                     <Link to="/rooms" className='btn-primary'>Back to Rooms</Link>
-//                 </div>
-//             );
-//         }
-//         const { name, description, capacity, price, size, breakfast, extras, pets, images } = room;
-//         return (
-//             <StyledHero img={images[0] || this.state.defaultBcg}>
-//                 <Banner title={`${name} room`}>
-//                     <Link to='/rooms' className='btn-primary'>Back to Rooms</Link>
-//                 </Banner>
-//             </StyledHero>
-//         )
-//     }
-// }

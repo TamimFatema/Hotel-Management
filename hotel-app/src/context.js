@@ -7,15 +7,31 @@ export default class RoomProvider extends Component {
         rooms: [],
         sortedRooms: [],
         featuredRooms: [],
-        loading: false
+        loading: false,
+        type: "all",
+        capacity: 1,
+        price: 0,
+        minPrice: 0,
+        maxPrice: 0,
+        breakfast: true
     };
 
     componentDidMount() {
-        let rooms = this.formatData(items)
+        // this.getData();
+        let rooms = this.formatData(items);
         let featuredRooms = rooms.filter(room => room.featured === true);
+        //
+        let maxPrice = Math.max(...rooms.map(item => item.price));
+        let maxSize = Math.max(...rooms.map(item => item.size));
         this.setState({
-            rooms, featuredRooms, sortedRooms: rooms, loading: false
-        })
+            rooms,
+            featuredRooms,
+            sortedRooms: rooms,
+            loading: false,
+            price: maxPrice,
+            maxPrice,
+            maxSize
+        });
     }
 
     formatData(items) {
@@ -41,7 +57,18 @@ export default class RoomProvider extends Component {
             </RoomContext.Provider>);
     }
 }
-
-const RoomGuest = RoomContext.Guest;
+const RoomGuest = RoomContext.Consumer;
 
 export { RoomProvider, RoomContext, RoomGuest }
+
+export function withRoomGuest(Component) {
+
+    return function GuestWrapper(props) {
+        return (
+            <RoomGuest>
+                {value => <Component {...props} context={value} />}
+            </RoomGuest>
+        )
+    }
+}
+

@@ -102,12 +102,16 @@ h6 {
 
 /* end of globals */
 /* Navbar */
+
+
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
+    left: 0;
+    transform: none;
     width: 100%;
     padding: 0.75rem 2rem;
-    background: var(--offWhite);
+    background: teal;
     z-index: 1;
 
 }
@@ -124,10 +128,6 @@ h6 {
     outline: none;
 }
 
-.nav-icon {
-    font-size: 1.5rem;
-    color: var(--primaryColor);
-}
 
 .nav-links {
     height: 0;
@@ -137,10 +137,10 @@ h6 {
 }
 
 .nav-links a {
-    display: block;
+    display: flex;
     text-decoration: none;
     padding: 1rem 0;
-    color: var(--mainBlack);
+    color: white;
     transition: var(--mainTransition);
     text-align: center;
     font-size: 1rem;
@@ -184,7 +184,7 @@ h6 {
 .defaultHero,
 .roomsHero {
     min-height: calc(100vh - 66px);
-    background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+    background: url("./images/defaultBcg.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
