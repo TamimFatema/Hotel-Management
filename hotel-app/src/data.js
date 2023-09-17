@@ -24,13 +24,11 @@ export default [
       name: "single economy",
       roomID: "single-economy",
       type: "single",
-      price: 100,
-      size: 200,
+      price: 1500,
       capacity: 1,
       breakfast: false,
       featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+      description: "The single economy room is the perfect option for lone travelers with more than satisfactory facilities such as an air conditioner, a study desk, free Wi-Fi, and a coffee machine. It’s also a great choice for business trips because of the hotel’s ability to host any kind of event or meeting in the multi-purpose meeting rooms located in the main building. All Single Economy Rooms are meticulously designed with minimalistic taste and modern furniture to meet all your needs and give you the comfort of your own room at a central and historical location.",
       extras: [
         "Plush pillows and breathable bed linens",
         "Soft, oversized bath towels",

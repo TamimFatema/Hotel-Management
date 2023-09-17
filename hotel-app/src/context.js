@@ -22,7 +22,6 @@ export default class RoomProvider extends Component {
         let featuredRooms = rooms.filter(room => room.featured === true);
         //
         let maxPrice = Math.max(...rooms.map(item => item.price));
-        let maxSize = Math.max(...rooms.map(item => item.size));
         this.setState({
             rooms,
             featuredRooms,
@@ -30,7 +29,7 @@ export default class RoomProvider extends Component {
             loading: false,
             price: maxPrice,
             maxPrice,
-            maxSize
+
         });
     }
 
@@ -49,6 +48,51 @@ export default class RoomProvider extends Component {
         let tempRooms = [...this.state.rooms];
         const room = tempRooms.find(room => room.roomID === roomID);
         return room;
+    };
+    handleChange = event => {
+        const target = event.target;
+        const value = target.type === "checkbox" ? target.checked : target.value;
+        const name = target.name;
+        console.log(name, value);
+
+        this.setState(
+            {
+                [name]: value
+            },
+            this.filterRooms
+        );
+    };
+    filterRooms = () => {
+        let {
+            rooms,
+            type,
+            capacity,
+            price,
+            breakfast,
+
+        } = this.state;
+
+        let tempRooms = [...rooms];
+
+        capacity = parseInt(capacity);
+        price = parseInt(price);
+        // filter by type
+        if (type !== "all") {
+            tempRooms = tempRooms.filter(room => room.type === type);
+        }
+        // filter by capacity
+        if (capacity !== 1) {
+            tempRooms = tempRooms.filter(room => room.capacity >= capacity);
+        }
+        // filter by price
+        tempRooms = tempRooms.filter(room => room.price <= price);
+        //filter by breakfast
+        if (breakfast) {
+            tempRooms = tempRooms.filter(room => room.breakfast === true);
+        }
+        this.setState({
+            sortedRooms: tempRooms
+        });
     };
     render() {
         return (
@@ -71,4 +115,3 @@ export function withRoomGuest(Component) {
         )
     }
 }
-
